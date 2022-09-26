@@ -7,7 +7,7 @@ $(() => {
         socket.emit("chat msg", $("#msg").val())
     } else {
         socket.emit("login", $("#msg").val())
-        login = $("msg").val()
+        login = $("#msg").val()
     }
         return false
     })
