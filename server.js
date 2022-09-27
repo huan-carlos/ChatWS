@@ -16,11 +16,11 @@ serverSocket.on("connect", socket => {
     console.log(`Cliente conectado ${socket.id} conectou!`)
 
     socket.on("chat msg", msg => {
-        serverSocket.emit("chat msg", `Msg recebida de ${socket.username}: ${msg}`)
+        serverSocket.emit("chat msg", `Message of ${socket.username}: ${msg}`)
     })
 
     socket.on("login", username => {
         socket.username = username
-        serverSocket.emit("chat msg", `Usuário ${socket.username} entrou`)
+        serverSocket.emit("chat msg", `User ${socket.username} enter`)
     })
 })

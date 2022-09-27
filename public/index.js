@@ -3,12 +3,14 @@ $(() => {
     let login
 
     $("#form1").on("submit", () => {
-    if(login){
-        socket.emit("chat msg", $("#msg").val())
-    } else {
-        socket.emit("login", $("#msg").val())
-        login = $("#msg").val()
-    }
+        if (login) {
+            socket.emit("chat msg", $("#msg").val())
+            $("#msg").val("")
+        } else {
+            socket.emit("login", $("#msg").val())
+            login = $("#msg").val()
+            $("#msg").val("")
+        }
         return false
     })
 
