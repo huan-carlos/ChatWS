@@ -9,3 +9,5 @@ Esse sistema foi criado para atender a matéria de Sistemas Para Internet no IFT
  - JavaScript
  - Node JS
  - Web Socket
+
+Link para aplicação: https://chatws-huan.herokuapp.com/
